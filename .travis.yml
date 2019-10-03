@@ -4,6 +4,10 @@ services:
 git:
   submodules: false
 
+install:
+  - wget https://raw.githubusercontent.com/cth103/cdist/master/cdist
+  - cp cdist /usr/bin/
+
 script:
   - cdist -p dcpomatic -c v2.15.x -t ubuntu-18.04-64 package
 
