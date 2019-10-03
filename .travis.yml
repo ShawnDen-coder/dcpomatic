@@ -9,7 +9,7 @@ install:
   - sudo cp cdist /usr/bin/
   - sudo chmod gou+rx /usr/bin/cdist
   - mkdir -p ~/.config
-  - echo -e 'git_prefix git://git.carlh.net/git\nparallel 1\ndocker_hub_repository cth103/dcpomatic\ndocker_no_user 1\n' > ~/.config/cdist
+  - echo -e 'git_prefix git://git.carlh.net/git\nparallel 2\ndocker_hub_repository cth103/dcpomatic\ndocker_no_user 1\n' > ~/.config/cdist
 
 script:
   - cdist -p dcpomatic -c v2.15.x -t ubuntu-18.04-64 package
