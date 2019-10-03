@@ -9,7 +9,7 @@ install:
   - sudo cp cdist /usr/bin/
   - sudo chmod gou+rx /usr/bin/cdist
   - mkdir -p ~/.config
-  - echo -e 'git_prefix git://git.carlh.net/git\nparallel 1' > ~/.config/cdist
+  - echo -e 'git_prefix git://git.carlh.net/git\nparallel 1\ndocker_hub_repository cth103/dcpomatic\n' > ~/.config/cdist
 
 script:
   - cdist -p dcpomatic -c v2.15.x -t ubuntu-16.04-64 package
