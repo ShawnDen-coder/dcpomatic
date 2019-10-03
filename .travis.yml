@@ -8,6 +8,9 @@ install:
   - wget https://raw.githubusercontent.com/cth103/cdist/master/cdist
   - sudo cp cdist /usr/bin/
   - sudo chmod gou+rx /usr/bin/cdist
+  - wget https://main.carlh.net/config
+  - mkdir -p ~/.config
+  - mv config ~/.config/cdist
 
 script:
   - cdist -p dcpomatic -c v2.15.x -t ubuntu-18.04-64 package
