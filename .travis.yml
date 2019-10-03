@@ -1,6 +1,9 @@
 services:
   - docker
 
+git:
+  submodules: false
+
 script:
   - cdist -p dcpomatic -c v2.15.x -t ubuntu-18.04-64 package
 
